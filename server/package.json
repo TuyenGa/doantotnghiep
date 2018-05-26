@@ -1,0 +1,40 @@
+{
+  "name": "doantotnghiep",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node main.js --presets es2015,stage-2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Tuyenga@bitbucket.org/Tuyenga/doantotnghiep.git"
+  },
+  "keywords": [
+    "Nodejs"
+  ],
+  "author": "Vuong quang tuyen",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/Tuyenga/doantotnghiep#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.5.1",
+    "knex": "^0.14.5",
+    "koa": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-cors": "^0.0.16",
+    "koa-logger": "^3.2.0",
+    "koa-multer": "^1.0.2",
+    "koa-router": "^7.4.0",
+    "koajs": "^1.0.0",
+    "pg": "^7.4.1",
+    "pg-promise": "^8.2.3",
+    "yarn": "^1.5.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
+  }
+}
