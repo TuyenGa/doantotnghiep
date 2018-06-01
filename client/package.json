@@ -11,11 +11,13 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "lodash": "^4.17.10",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vue2-dropzone": "^3.2.2",
+    "vue2-google-maps": "^0.9.7",
     "vuetify": "^1.0.0"
   },
   "devDependencies": {

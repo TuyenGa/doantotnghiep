@@ -52,11 +52,8 @@ export default {
     'nav-item': NavItem,
     Login,
   },
-  mounted() {
-    console.log(this.isRegister);
-  },
   data: () => ({
-    isLogin: true,
+    isLogin: false,
     isRegister: false,
     showDialog: false,
     buyDatas: [
@@ -65,20 +62,20 @@ export default {
       { title: 'New Home', link: '/detail' },
     ],
     rentDatas: [
-      { title: 'All Rentals', link: '/detail'},
-      { title: 'Apartment for Rent', link: '/detail'},
-      { title: 'Room for Rent', link: '/detail'},
+      { title: 'All Rentals', link: '/detail' },
+      { title: 'Apartment for Rent', link: '/detail' },
+      { title: 'Room for Rent', link: '/detail' },
     ],
     localScoop: [
-      { title: 'Real Estate Overview', link: '/detail'},
-      { title: 'Market Trends', link: '/detail'},
-      { title: 'School', link: '/detail'},
+      { title: 'Real Estate Overview', link: '/detail' },
+      { title: 'Market Trends', link: '/detail' },
+      { title: 'School', link: '/detail' },
     ],
     profile: [
-      { title: 'Profile', link: '/account/edit-profile'},
-      { title: 'Rental Resume', link: '/account/rental-resume'},
-      { title: 'My Room for Rent', link: '/account/room-rent'},
-    ]
+      { title: 'Profile', link: '/account/edit-profile' },
+      { title: 'Rental Resume', link: '/account/rental-resume' },
+      { title: 'My Room for Rent', link: '/account/room-rent' },
+    ],
   }),
   props: {
     flat: {
@@ -87,14 +84,14 @@ export default {
     position: {
       type: Boolean,
       default: false,
-    }
+    },
   },
   methods: {
     goto(link) {
-      this.$router.push(link)
+      this.$router.push(link);
     },
-     openDialog() {
-      this.showDialog = true
+    openDialog() {
+      this.showDialog = true;
     },
   },
 };

@@ -61,8 +61,8 @@ export default {
   methods: {
     gotolink(link) {
       let data = this.items;
-      data = data.map(item => {
-        item.active = item.link === link;
+      data = data.map((item) => {
+        item.active = item.link === link; //eslint-disable-line
         return item;
       });
 

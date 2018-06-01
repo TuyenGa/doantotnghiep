@@ -132,7 +132,6 @@ export default {
       e1: 0,
       e2: 0,
       addressPlaceholder: 'What is the address of this listing?',
-      timeRangePlaceholder: `What's the duration of the lease ?`,
       gender: [
         {
           text: 'Female',

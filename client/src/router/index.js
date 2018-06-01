@@ -7,6 +7,7 @@ import Account from '@/views/Account';
 import RentalResume from '@/components/AccountComponent/RentalResume';
 import EditProfile from '@/components/AccountComponent/EditProfile';
 import MyRoomForRent from '@/components/AccountComponent/MyRoomForRent';
+import Search from '@/views/Search';
 
 Vue.use(Router);
 
@@ -49,6 +50,11 @@ export default new Router({
         },
       ],
       component: Account,
+    },
+    {
+      path: '/Search',
+      name: 'Search',
+      component: Search,
     },
   ],
 });

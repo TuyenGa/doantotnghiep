@@ -115,7 +115,10 @@ export default {
   name: 'EditProfile',
   methods: {
     changeProfile() {
-      this.emailEdit = false
+      this.emailEdit = false;
+    },
+    gotoResume() {
+      this.$router.push('/account/rental-resume');
     },
   },
   data() {
@@ -150,11 +153,6 @@ export default {
   components: {
     UploadFile,
   },
-  methods: {
-    gotoResume() {
-      this.$router.push('/account/rental-resume');
-    },
-  }
 };
 </script>
 <style lang="sass" scoped>

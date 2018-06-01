@@ -45,7 +45,7 @@ export default {
   props: {
     type: {
       type: String,
-    }
+    },
   },
   components: {
     EditProfile,

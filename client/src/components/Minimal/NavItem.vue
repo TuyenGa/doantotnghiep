@@ -33,7 +33,7 @@ export default {
     goto(link) {
       this.$router.push(link);
     },
-  }
+  },
 };
 </script>
 <style lang="sass">

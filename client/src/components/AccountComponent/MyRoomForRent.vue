@@ -32,7 +32,7 @@ export default {
     };
   },
   components: {
-    DialogStepPost
+    DialogStepPost,
   },
   methods: {
     opendialog() {

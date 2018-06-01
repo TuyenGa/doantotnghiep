@@ -30,11 +30,6 @@ export default {
       type: String,
     },
   },
-  methods: {
-    filesChange(files) {
-      
-    },
-  }
 };
 </script>
 <style lang="sass" scoped>

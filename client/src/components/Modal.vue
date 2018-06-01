@@ -14,12 +14,12 @@
 <script>
 function makeRefd() {
   let text = '';
-  let possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
   for (var i = 0; i < 10; i++) // eslint-disable-line
     text += possible.charAt(Math.floor(Math.random() * possible.length));
 
-  return 'modal-' + text;
+  return `modal-${text}`;
 }
 
 const modalActives = [];
@@ -30,7 +30,7 @@ export default {
     return {
       modalRef: this.nameModal || makeRefd(),
       open: this.dialog,
-    }
+    };
   },
   methods: {
     closeDialog(modalRef) {
@@ -40,7 +40,7 @@ export default {
         }
         this.$emit('close');
       }
-    }
+    },
   },
   watch: {
     dialog(val) {
@@ -49,9 +49,8 @@ export default {
 
       this.open = val;
     },
-
-  }
-}
+  },
+};
 </script>
 <style scoped>
 .overlay-animation {
