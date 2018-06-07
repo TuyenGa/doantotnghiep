@@ -6,7 +6,7 @@
     <div class="temp-slide"></div>
     <div class="carousel-container">
       <SlideHome>
-        <SlideHomeItem v-for="i in 4" :key="i"/>
+        <SlideHomeItem v-for="i in 4" :key="i" :dataDetail="dataDetail" />
       </SlideHome>
     </div>
     <div class="temp-slide"></div>
@@ -18,9 +18,29 @@ import SlideHomeItem from '@/components/Minimal/SlideHomeItem';
 
 export default {
   name: 'ContentHome',
+  data() {
+    return {
+      dataDetail: null,
+    };
+  },
   components: {
     SlideHome,
     SlideHomeItem,
+  },
+  created() {
+    this.$store.dispatch('detail/getListDetail', {cateType: 1});
+  },
+  watch: {
+    detail() {
+      this.detail.map(item => {
+        this.dataDetail = item;
+      });
+    },
+  },
+  computed: {
+    detail() {
+      return this.$store.getters['detail/getListDetail'];
+    },
   },
 };
 </script>

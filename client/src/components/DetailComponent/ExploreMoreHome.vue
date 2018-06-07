@@ -3,7 +3,7 @@
     <v-expansion-panel-content >
       <div class="more-home" slot="header">Explore More Home</div>
       <SlideHome>
-        <SlideHomeItem v-for="item in 4" :key="item"></SlideHomeItem>
+        <SlideHomeItem v-for="item in 3" :key="item"></SlideHomeItem>
       </SlideHome>
       </v-expansion-panel-content>
     </v-expansion-panel>

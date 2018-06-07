@@ -7,6 +7,9 @@
 <script>
 export default {
   name: 'App',
+  created() {
+    this.$store.dispatch('account/getInfo', 1);
+  },
 };
 </script>
 <style>

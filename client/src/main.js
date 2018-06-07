@@ -6,6 +6,7 @@ import * as VueGoogleMaps from 'vue2-google-maps';
 import 'vue2-dropzone/dist/vue2Dropzone.min.css';
 import 'vuetify/dist/vuetify.min.css';
 import './assets/stylesheets/normalize.css';
+import store from './Store/store';
 import App from './App';
 import router from './router';
 
@@ -32,6 +33,7 @@ export const eventBus = new Vue(); // eslint-disable-line
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>',
 });

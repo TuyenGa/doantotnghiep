@@ -30,6 +30,7 @@
             <v-text-field
               label="Email"
               v-model="emailAddress"
+              :value="getInfo.email"
             ></v-text-field>
             <v-text-field
               label="Password"
@@ -40,7 +41,7 @@
           <div class="email-password-false" v-if="emailEdit === false">
             <label for="email" class="email-label">Email</label>
             <p class="email-address">
-              {{emailAddress}}
+              {{getInfo.email}}
             </p>
             <span @click="emailEdit = !emailEdit" class="edit-email-address">
               Edit
@@ -69,9 +70,9 @@
           </div>
           <div class="home-buyer">
             <v-select
-              :items="userTypes"
+              :items="userTypesItem"
               label="User type"
-              v-model="userTypeItem"
+              v-model="userTypesItem"
             ></v-select>
           </div>
           <div class="location">
@@ -121,6 +122,22 @@ export default {
       this.$router.push('/account/rental-resume');
     },
   },
+  created() {
+    this.emailAddress = this.getInfo.email;
+    this.yourName = this.getInfo.name;
+    this.address = this.getInfo.address;
+    this.phoneNumber = this.getInfo.phone;
+    this.userTypesItem = [
+      { text: 'Home Buyer' },
+      { text: 'Home Seller' },
+      { text: 'Both Buyer and Seller' },
+      { text: 'Renter' },
+      { text: 'Real Estate Pro' },
+      { text: 'Other/Just Looking' },
+      { text: 'Home Owner' },
+      { text: 'Renter/Rentee' },
+    ];
+  },
   data() {
     return {
       profile: {
@@ -146,8 +163,8 @@ export default {
     changeAvatar: {
       type: Boolean,
     },
-    emailAddress: {
-      type: String,
+    getInfo: {
+      type: Object,
     },
   },
   components: {

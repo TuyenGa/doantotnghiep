@@ -21,6 +21,10 @@ export default {
       type: Array,
       default: [],
     },
+    checkProfile: {
+      type: Boolean,
+      default: false,
+    },
     city: {
       type: String,
     },
@@ -31,7 +35,12 @@ export default {
   },
   methods: {
     goto(link) {
-      this.$router.push(link);
+      if (this.checkProfile === false) {
+        this.$store.dispatch('detail/getListDetail', 2);
+        this.$router.push('/search');
+      } else if (this.checkProfile === true) {
+        this.$router.push(link);
+      }
     },
   },
 };

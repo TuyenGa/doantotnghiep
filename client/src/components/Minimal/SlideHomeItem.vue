@@ -1,25 +1,25 @@
 <template>
-  <v-flex xs3 sm3>
+  <v-flex>
     <li class="list-home">
       <a class="tile-link" @click="goto('/detail')">
         <v-card>
-          <v-card-media src="http://thumbs.trulia-cdn.com/pictures/thumbs_3/zillowstatic/ISuslkqq5odvzu1000000000.jpg" height="160px">
+          <v-card-media :src="random()" height="160px">
           </v-card-media>
           <v-card-title primary-title class="primary-detail-home">
             <div>
-              <h5 class="headline mb-0 amount">$4,300,000</h5>
+              <h5 class="headline mb-0 amount">${{price}}</h5>
               <div class="icon-room">
                 <div class="icon-show">
                   <v-icon small>fas fa-bed</v-icon>
-                  4bd
+                  {{bed_room}}bd
                 </div>
                 <div class="icon-show">
                   <v-icon small>fas fa-bath</v-icon>
-                  4ba
+                  {{bath_room}}ba
                 </div>
               </div>
               <p class="home-number">900 5th Ave #2B</p>
-              <p class="street-number">Upper East Side, New York, NY</p>
+              <p class="street-number">{{address}}</p>
 
             </div>
           </v-card-title>
@@ -31,9 +31,39 @@
 <script>
 export default {
   name: 'SlideHomeItem',
+  data() {
+    return {
+      bed_room: 0,
+      bath_room: 0,
+      price: 0,
+      address: 'Hà Nội',
+      items: [
+        'http://thumbs.trulia-cdn.com/pictures/thumbs_3/zillowstatic/ISuslkqq5odvzu1000000000.jpg',
+        'http://thumbs.trulia-cdn.com/pictures/thumbs_3/zillowstatic/ISibwjr21kovsg1000000000.jpg',
+        'http://thumbs.trulia-cdn.com/pictures/thumbs_3/zillowstatic/ISukvmwtwkk30j1000000000.jpg',
+        'http://thumbs.trulia-cdn.com/pictures/thumbs_3/zillowstatic/ISu4j6no0sr7hh0000000000.jpg',
+        'http://thumbs.trulia-cdn.com/pictures/thumbs_3/zillowstatic/IS6u63crmwfc5r0000000000.jpg',
+      ],
+    };
+  },
+  props: [
+    'dataDetail',
+  ],
   methods: {
     goto(link) {
       this.$router.push(link);
+    },
+    random() {
+      const item = this.items[Math.floor(Math.random() * this.items.length)];
+      return item;
+    },
+  },
+  watch: {
+    dataDetail() {
+      this.bed_room = this.dataDetail.bed_room;
+      this.bath_room = this.dataDetail.baths_room;
+      this.price = this.dataDetail.price;
+      this.address = this.dataDetail.address;
     },
   },
 };

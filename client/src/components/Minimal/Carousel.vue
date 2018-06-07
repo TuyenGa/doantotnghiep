@@ -12,16 +12,16 @@ export default {
     return {
       items: [
         {
-          src: 'https://vuetifyjs.com/static/doc-images/carousel/squirrel.jpg',
+          src: 'http://thumbs.trulia-cdn.com/pictures/thumbs_6/zillowstatic/ISecasimvydi6l0000000000.jpg',
         },
         {
-          src: 'https://vuetifyjs.com/static/doc-images/carousel/sky.jpg',
+          src: 'http://thumbs.trulia-cdn.com/pictures/thumbs_6/zillowstatic/ISyj5tc4quisak0000000000.jpg',
         },
         {
-          src: 'https://vuetifyjs.com/static/doc-images/carousel/bird.jpg',
+          src: 'http://thumbs.trulia-cdn.com/pictures/thumbs_6/zillowstatic/IS6yxanrbjv8nm0000000000.jpg',
         },
         {
-          src: 'https://vuetifyjs.com/static/doc-images/carousel/planet.jpg',
+          src: 'http://thumbs.trulia-cdn.com/pictures/thumbs_6/zillowstatic/IS668g0grq5l6l0000000000.jpg',
         },
       ],
     };

@@ -7,6 +7,7 @@ exports.up = function(knex, Promise) {
       table.boolean('smoking')
       table.integer('pets').notNullable().defaultTo(0);
       table.integer('income')
+      table.integer('tenants') // số thành viên được thuê
       table.string('employer', [200])
       table.string('job_type', [200])
       table.timestamp('created_at').defaultTo(knex.fn.now())

@@ -13,9 +13,10 @@ export default {
 </script>
 <style lang="sass" scoped>
 .inner-carousel
-  overflow-x: hidden
-  width: inherit
-  height: auto
+  margin-top: 14px;
+  overflow-x: hidden;
+  width: 100%;
+  height: auto;
   .carousel-list
     width: auto
     will-change: transform

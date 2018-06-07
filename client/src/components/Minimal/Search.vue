@@ -1,7 +1,19 @@
 <template>
   <div class="search">
-    <input id="input-box" v-model="searchValue" class="search-input" type="text" placeholder="Address, Neighborhood, City, ZIP">
-    <v-btn flat color="background" class="btn-search"><v-icon large>search</v-icon></v-btn>
+    <input
+      id="input-box"
+      v-model="searchValue"
+      class="search-input"
+      type="text"
+      placeholder="Address, Neighborhood, City"
+      @keypress.enter="searching()"
+    />
+    <v-btn
+      flat
+      color="background"
+      @click="searching()"
+      class="btn-search"
+    ><v-icon large>search</v-icon></v-btn>
   </div>
 </template>
 <script>
@@ -10,6 +22,12 @@ export default {
   data: () => ({
     searchValue: '',
   }),
+  methods: {
+    searching() {
+      this.$store.dispatch('detail/getListDetail', {cateType: 2, address: this.searchValue});
+      this.$router.push('/search');
+    }
+  },
 };
 </script>
 <style lang="sass" scoped>

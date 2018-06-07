@@ -5,7 +5,7 @@
         <div :class="{'clearfix': true,  'nav-content': true, 'detail-nav': flat}">
           <div class="list-menu-drop-down" >
             <v-btn
-              @click="goto('/home')"
+              @click="goto('/')"
               flat
               class="white--text"
             >
@@ -27,6 +27,7 @@
               <nav-item
                 v-else-if="!isLogin"
                 :items="profile"
+                :checkProfile="true"
                 title="Quang Tuyên"
               />
             </div>

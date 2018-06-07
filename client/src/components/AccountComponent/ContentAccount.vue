@@ -4,6 +4,7 @@
       v-if="type === 'edit-profile'"
       :publicResume="publicResume"
       :userTypes="userTypes"
+      :getInfo="getInfo"
       :emailEdit="emailEdit"
       :changeAvatar="changeAvatar"
       :emailAddress="emailAddress"
@@ -26,16 +27,6 @@ export default {
   data() {
     return {
       publicResume: true,
-      userTypes: [
-        { text: 'Home Buyer' },
-        { text: 'Home Seller' },
-        { text: 'Both Buyer and Seller' },
-        { text: 'Renter' },
-        { text: 'Real Estate Pro' },
-        { text: 'Other/Just Looking' },
-        { text: 'Home Owner' },
-        { text: 'Renter/Rentee' },
-      ],
       emailEdit: false,
       changeAvatar: false,
       emailAddress: 'Vuongquangtuyendz@gmail.com',
@@ -45,6 +36,11 @@ export default {
   props: {
     type: {
       type: String,
+    },
+  },
+  computed: {
+    getInfo() {
+      return this.$store.getters['account/getInfo'];
     },
   },
   components: {

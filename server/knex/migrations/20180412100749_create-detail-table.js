@@ -12,6 +12,7 @@ exports.up = function(knex, Promise) {
       table.string('time_range').default('6 months').notNullable();
       table.integer('user_id', 3).references('id').inTable('users').onDelete('CASCADE').onUpdate('CASCADE').notNullable();
       table.integer('location_id', 3).references('id').inTable('locations').onDelete('CASCADE').onUpdate('CASCADE').notNullable();
+      table.integer('categories_id', 3).references('id').inTable('categories').onDelete('CASCADE').onUpdate('CASCADE').notNullable();
       table.integer('feature_id', 3).references('id').inTable('features').onDelete('CASCADE').onUpdate('CASCADE').notNullable();
       table.timestamp('created_at').defaultTo(knex.fn.now())
       table.timestamp('updated_at').defaultTo(knex.fn.now())

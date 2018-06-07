@@ -3,8 +3,10 @@
     <div class="search-input">
       <GmapAutocomplete
         class="input-auto-complete"
+        ref="autoComplete"
         @place_changed="setPlace"
         placeholder="Find your place"
+        :selectFirstOnEnter="true"
       >
       </GmapAutocomplete>
     </div>
@@ -61,7 +63,7 @@
   </div>
 </template>
 <script>
-import { eventBus } from '../../main.js';
+import { eventBus } from '@/main';
 
 export default {
   name: 'SearchInput',
@@ -144,12 +146,22 @@ export default {
 <style lang="sass" scoped>
 .search-system
   display: flex
-  position: relative
   padding-left: 20px
   top: 48px
+  z-index: 100
+  background-color: #fff
   vertical-align: middle
   line-height: 46px
-
+  width: 100%
+  position: fixed
+  padding-left: 20px
+  top: 48px
+  z-index: 100
+  background-color: #fff
+  vertical-align: middle
+  line-height: 46px
+  width: 100%
+  box-shadow: rgba(0,0,0,.2) 0 2px 2px 0;
 .input-auto-complete
   border: 1px solid #20c063;
   height: 31px;

@@ -10,11 +10,11 @@ exports.seed = function(knex, Promise) {
           "name": "Rent"
         }, {
           "type": 2,
-          "name": "Share Room"
+          "name": "Share"
         }, {
           "type": 3,
-          "name": "My Home for rent"
+          "name": "Buy"
         }
-    ]);
+      ]);
     });
 };

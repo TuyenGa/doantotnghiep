@@ -15,57 +15,44 @@
           <v-divider></v-divider>
         </div>
         <div class="profile-form">
-          <div class="move-in-date mrRight">
-              <label class="label-title"></label>
-               <v-select
-                :items="moveInDate"
-                label="Move In Date"
-                single-line
-              ></v-select>
-            </div>
-            <div class="moving-form mrRight">
+          <div class="tenants mrRight">
+            <label class="label-title"></label>
+              <v-select
+              :items="moveInDate"
+              label="Tenats"
+              single-line
+            ></v-select>
+          </div>
+          <div class="pets mrRight">
+            <label class="label-title"></label>
+              <v-select
+              :items="moveInDate"
+              label="Pets"
+              single-line
+            ></v-select>
+          </div>
+          <div class="smoking mrRight">
+            <label class="label-title"></label>
+              <v-select
+              :items="moveInDate"
+              label="Smoking"
+              single-line
+            ></v-select>
+          </div>
+          <div class="tenants mrRight">
+            <label class="label-title"></label>
+              <v-select
+              :items="moveInDate"
+              label="Income, All Tenants"
+              single-line
+            ></v-select>
+          </div>
+          <div class="credit mrRight mrBottom">
+            <label class="label-title"></label>
               <v-text-field
-                label="Moving from"
+                label="Job Title"
               ></v-text-field>
-            </div>
-            <div class="tenants mrRight">
-              <label class="label-title"></label>
-                <v-select
-                :items="moveInDate"
-                label="Tenats"
-                single-line
-              ></v-select>
-            </div>
-            <div class="pets mrRight">
-              <label class="label-title"></label>
-                <v-select
-                :items="moveInDate"
-                label="Pets"
-                single-line
-              ></v-select>
-            </div>
-            <div class="smoking mrRight">
-              <label class="label-title"></label>
-                <v-select
-                :items="moveInDate"
-                label="Smoking"
-                single-line
-              ></v-select>
-            </div>
-            <div class="tenants mrRight">
-              <label class="label-title"></label>
-                <v-select
-                :items="moveInDate"
-                label="Income, All Tenants"
-                single-line
-              ></v-select>
-            </div>
-            <div class="credit mrRight mrBottom">
-              <label class="label-title"></label>
-                <v-text-field
-                  label="Job Title"
-                ></v-text-field>
-            </div>
+          </div>
         </div>
       </div>
       <v-divider></v-divider>

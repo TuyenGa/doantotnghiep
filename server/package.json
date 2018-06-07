@@ -20,16 +20,17 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "bluebird": "^3.5.1",
-    "knex": "^0.14.5",
-    "koa": "^2.5.0",
+    "knex": "^0.14.6",
+    "koa": "^2.5.1",
     "koa-bodyparser": "^4.2.0",
     "koa-cors": "^0.0.16",
     "koa-logger": "^3.2.0",
     "koa-multer": "^1.0.2",
     "koa-router": "^7.4.0",
     "koajs": "^1.0.0",
-    "pg": "^7.4.1",
+    "pg": "^7.4.3",
     "pg-promise": "^8.2.3",
+    "shortid": "^2.2.8",
     "yarn": "^1.5.1"
   },
   "devDependencies": {
