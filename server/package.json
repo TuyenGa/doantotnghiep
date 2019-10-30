@@ -20,7 +20,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "bluebird": "^3.5.1",
-    "knex": "^0.14.6",
+    "knex": "^0.19.5",
     "koa": "^2.5.1",
     "koa-bodyparser": "^4.2.0",
     "koa-cors": "^0.0.16",
